@@ -3,70 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sustentabilidade na Agricultura</title>
-  <link rel="stylesheet" href="style.css">
+  <title>AgroSustentável</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>🌱 Sustentabilidade na Agricultura</h1>
-    <p>Cuidando da terra hoje para garantir o amanhã.</p>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">Agro<span>Sustentável</span></h1>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#praticas">Práticas</a></li>
+          <li><a href="#rastreamento">Rastreabilidade</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-btn">☰</button>
+    </div>
   </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#praticas">Práticas Sustentáveis</a>
-    <a href="#impacto">Impacto</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
 
-  <section class="banner">
-    <div class="overlay">
-      <h2>Agricultura e Meio Ambiente</h2>
-      <p>Produzir alimentos respeitando a natureza é essencial para um futuro melhor.</p>
-      <button id="btnMensagem">Clique para uma mensagem 🌿</button>
+    <div class="hero-content">
+      <h2>Produção Agrícola com Responsabilidade Ambiental</h2>
+
+      <p>
+        Tecnologia, rastreabilidade e sustentabilidade
+        para um agronegócio mais eficiente e consciente.
+      </p>
+
+      <a href="#produtos" class="btn">Conheça nossos produtos</a>
     </div>
   </section>
 
-  <section id="sobre" class="conteudo">
-    <h2>O que é Sustentabilidade na Agricultura?</h2>
-    <p>
-      A sustentabilidade na agricultura busca produzir alimentos de maneira responsável,
-      preservando os recursos naturais, reduzindo impactos ambientais e garantindo qualidade
-      de vida para as futuras gerações.
-    </p>
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-title">
+        <h2>Compromisso com o Futuro</h2>
+        <p>
+          Atuamos com foco em práticas agrícolas sustentáveis,
+          preservação ambiental e inovação tecnológica.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🌱 ESG</h3>
+          <p>
+            Aplicamos princípios ambientais, sociais e de governança
+            em toda cadeia produtiva.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>✅ Certificações</h3>
+          <p>
+            Produção alinhada às normas ambientais e certificações
+            reconhecidas internacionalmente.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📍 Transparência</h3>
+          <p>
+            Rastreabilidade completa do plantio até a entrega final.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="praticas" class="cards">
-    <div class="card">
-      <h3>💧 Uso Consciente da Água</h3>
-      <p>Irrigação eficiente evita desperdícios e preserva os recursos hídricos.</p>
-    </div>
+  <!-- PRÁTICAS -->
+  <section class="praticas" id="praticas">
+    <div class="container praticas-grid">
 
-    <div class="card">
-      <h3>🌾 Rotação de Culturas</h3>
-      <p>Ajuda a manter o solo fértil e reduz pragas naturalmente.</p>
-    </div>
+      <div class="praticas-text">
+        <h2>Práticas Agrícolas Sustentáveis</h2>
 
-    <div class="card">
-      <h3>♻️ Reciclagem no Campo</h3>
-      <p>O reaproveitamento de materiais reduz a poluição e melhora o ambiente.</p>
+        <ul>
+          <li>✔ Plantio Direto</li>
+          <li>✔ Rotação de Culturas</li>
+          <li>✔ Manejo Integrado de Pragas</li>
+          <li>✔ Agricultura de Precisão</li>
+          <li>✔ Irrigação Inteligente</li>
+          <li>✔ Bioinsumos e Controle Biológico</li>
+        </ul>
+
+        <p>
+          Utilizamos drones, sensores e softwares agrícolas
+          para reduzir desperdícios e aumentar a produtividade.
+        </p>
+      </div>
+
+      <div class="praticas-img">
+        <img
+          src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop"
+          alt="Agronegócio sustentável"
+        />
+      </div>
+
     </div>
   </section>
 
-  <section id="impacto" class="impacto">
-    <h2>Impactos Positivos</h2>
-    <ul>
-      <li>✔ Preservação do solo</li>
-      <li>✔ Redução da poluição</li>
-      <li>✔ Produção mais saudável</li>
-      <li>✔ Proteção da biodiversidade</li>
-    </ul>
+  <!-- RASTREAMENTO -->
+  <section class="rastreamento" id="rastreamento">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Rastreabilidade</h2>
+        <p>
+          Consulte o histórico de produção através do lote do produto.
+        </p>
+      </div>
+
+      <div class="rastreamento-box">
+        <input
+          type="text"
+          id="lote"
+          placeholder="Digite o número do lote"
+        />
+
+        <button onclick="buscarLote()">
+          Consultar
+        </button>
+      </div>
+
+      <div id="resultado"></div>
+
+    </div>
   </section>
 
-  <footer id="contato">
-    <p>Projeto Agrinho 2026 🌱</p>
-    <p>Desenvolvido para conscientizar sobre a sustentabilidade no campo.</p>
+  <!-- PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Nossos Produtos</h2>
+      </div>
+
+      <div class="cards">
+
+        <div class="produto-card">
+          <img
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
+            alt="Grãos"
+          />
+
+          <h3>Grãos Sustentáveis</h3>
+
+          <p>
+            Produção responsável com foco em qualidade e preservação ambiental.
+          </p>
+        </div>
+
+        <div class="produto-card">
+          <img
+            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop"
+            alt="Hortifrúti"
+          />
+
+          <h3>Hortifrúti Orgânico</h3>
+
+          <p>
+            Produtos frescos cultivados com técnicas ecológicas.
+          </p>
+        </div>
+
+        <div class="produto-card">
+          <img
+            src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=1200&auto=format&fit=crop"
+            alt="Tecnologia agrícola"
+          />
+
+          <h3>Tecnologia Agrícola</h3>
+
+          <p>
+            Soluções inteligentes para aumentar produtividade e eficiência.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog" id="blog">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Central de Notícias</h2>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <h3>Como o Plantio Direto reduz impactos ambientais</h3>
+          <p>
+            Entenda os benefícios da conservação do solo e retenção de carbono.
+          </p>
+          <a href="#">Ler mais →</a>
+        </article>
+
+        <article class="blog-card">
+          <h3>Bioinsumos: o futuro da agricultura sustentável</h3>
+          <p>
+            Descubra como os biofertilizantes estão revolucionando o campo.
+          </p>
+          <a href="#">Ler mais →</a>
+        </article>
+
+        <article class="blog-card">
+          <h3>Tecnologia no agro</h3>
+          <p>
+            Drones e sensores inteligentes aumentam produtividade no campo.
+          </p>
+          <a href="#">Ler mais →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Entre em Contato</h2>
+      </div>
+
+      <form class="form">
+
+        <input type="text" placeholder="Seu nome" required>
+
+        <input type="email" placeholder="Seu e-mail" required>
+
+        <textarea
+          placeholder="Digite sua mensagem"
+          rows="6"
+          required
+        ></textarea>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © 2026 AgroSustentável | Todos os direitos reservados.
+      </p>
+
+      <p>
+        CNPJ: 00.000.000/0001-00 |
+        Política de Privacidade |
+        LGPD
+      </p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
