@@ -70,4 +70,97 @@ function respostaErrada(){
     document.getElementById("quizResultado").innerHTML =
     "❌ Resposta incorreta.";
 
+} 
+function buscarLote(){
+
+    const lote = document.getElementById("lote").value;
+    const resultado = document.getElementById("resultado");
+
+    if(lote === ""){
+
+        resultado.innerHTML =
+        "<span style='color:red'>Digite um lote.</span>";
+
+        return;
+    }
+
+    resultado.innerHTML = `
+
+    <div class="lote-card">
+
+        <h3>Lote ${lote} ✅</h3>
+
+        <p><strong>Fazenda:</strong> Agro Verde Sustentável</p>
+
+        <p><strong>Localização:</strong> Paraná - Brasil</p>
+
+        <p><strong>Plantio:</strong> 12/03/2026</p>
+
+        <p><strong>Colheita:</strong> 28/07/2026</p>
+
+        <p><strong>Certificação:</strong> Produção Sustentável</p>
+
+        <p><strong>Economia de água:</strong> 30%</p>
+
+        <p><strong>Redução de carbono:</strong> 35%</p>
+
+        <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Lote-${lote}"
+        alt="QR Code">
+
+    </div>
+
+    `;
 }
+// QUIZ
+
+function quizCorreto(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "✅ Resposta correta! O plantio direto protege o solo.";
+
+}
+
+function quizErrado(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "❌ Resposta incorreta.";
+
+}
+
+// CONTADORES
+
+const contadores =
+document.querySelectorAll(".contador");
+
+contadores.forEach(contador => {
+
+    const atualizar = () => {
+
+        const alvo =
+        +contador.getAttribute("data-target");
+
+        const atual =
+        +contador.innerText;
+
+        const incremento =
+        alvo / 100;
+
+        if(atual < alvo){
+
+            contador.innerText =
+            Math.ceil(atual + incremento);
+
+            setTimeout(atualizar,20);
+
+        }else{
+
+            contador.innerText = alvo;
+
+        }
+
+    };
+
+    atualizar();
+
+}); 
