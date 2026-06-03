@@ -646,3 +646,59 @@ html{
 .lote-card img{
     margin-top:20px;
 }
+#quiz-container{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+#pergunta{
+    margin-bottom:25px;
+    color:#0d3b1e;
+}
+
+#alternativas{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.alternativa{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    background:white;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.alternativa:hover{
+    transform:translateY(-3px);
+}
+
+.correta{
+    background:#4CAF50 !important;
+    color:white;
+}
+
+.errada{
+    background:#e53935 !important;
+    color:white;
+}
+
+#proximaBtn{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#0d3b1e;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+#resultadoQuiz{
+    margin-top:20px;
+}
