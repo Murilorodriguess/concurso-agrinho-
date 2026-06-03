@@ -164,3 +164,170 @@ contadores.forEach(contador => {
     atualizar();
 
 }); 
+const perguntas = [
+{
+    pergunta: "Qual prática ajuda a reduzir a erosão do solo?",
+    alternativas: [
+        "Plantio Direto",
+        "Queimadas",
+        "Desmatamento",
+        "Uso excessivo de agrotóxicos"
+    ],
+    correta: 0
+},
+{
+    pergunta: "O que é agricultura de precisão?",
+    alternativas: [
+        "Plantar apenas manualmente",
+        "Utilizar tecnologia para melhorar a produção",
+        "Produzir sem planejamento",
+        "Aumentar o desperdício de água"
+    ],
+    correta: 1
+},
+{
+    pergunta: "Qual destas ações contribui para a sustentabilidade?",
+    alternativas: [
+        "Desmatamento",
+        "Desperdício de água",
+        "Rotação de culturas",
+        "Queimadas frequentes"
+    ],
+    correta: 2
+},
+{
+    pergunta: "Os bioinsumos são utilizados para:",
+    alternativas: [
+        "Substituir práticas sustentáveis",
+        "Aumentar a poluição",
+        "Auxiliar no controle biológico e fertilização",
+        "Eliminar a necessidade de planejamento"
+    ],
+    correta: 2
+},
+{
+    pergunta: "A rastreabilidade permite:",
+    alternativas: [
+        "Conhecer a origem do produto",
+        "Aumentar desperdícios",
+        "Ocultar informações do consumidor",
+        "Reduzir a qualidade dos alimentos"
+    ],
+    correta: 0
+}
+];
+
+let perguntaAtual = 0;
+let pontuacao = 0;
+
+const perguntaElemento =
+document.getElementById("pergunta");
+
+const alternativasElemento =
+document.getElementById("alternativas");
+
+const resultadoQuiz =
+document.getElementById("resultadoQuiz");
+
+const proximaBtn =
+document.getElementById("proximaBtn");
+
+function carregarPergunta(){
+
+    const atual = perguntas[perguntaAtual];
+
+    perguntaElemento.innerHTML =
+    `${perguntaAtual + 1}. ${atual.pergunta}`;
+
+    alternativasElemento.innerHTML = "";
+
+    atual.alternativas.forEach((alternativa,index)=>{
+
+        const botao =
+        document.createElement("button");
+
+        botao.innerText = alternativa;
+
+        botao.classList.add("alternativa");
+
+        botao.onclick = () =>
+        verificarResposta(index);
+
+        alternativasElemento.appendChild(botao);
+
+    });
+
+    proximaBtn.style.display = "none";
+}
+
+function verificarResposta(indice){
+
+    const atual = perguntas[perguntaAtual];
+
+    const botoes =
+    document.querySelectorAll(".alternativa");
+
+    botoes.forEach(btn => btn.disabled = true);
+
+    if(indice === atual.correta){
+
+        pontuacao++;
+
+        botoes[indice].classList.add("correta");
+
+    }else{
+
+        botoes[indice].classList.add("errada");
+
+        botoes[atual.correta]
+        .classList.add("correta");
+    }
+
+    proximaBtn.style.display = "inline-block";
+}
+
+function proximaPergunta(){
+
+    perguntaAtual++;
+
+    if(perguntaAtual < perguntas.length){
+
+        carregarPergunta();
+
+    }else{
+
+        mostrarResultado();
+    }
+}
+
+function mostrarResultado(){
+
+    let mensagem = "";
+
+    if(pontuacao === 5){
+
+        mensagem =
+        "🏆 Excelente! Você domina o tema da agricultura sustentável.";
+
+    }else if(pontuacao >= 3){
+
+        mensagem =
+        "🌱 Muito bem! Você possui bons conhecimentos sobre sustentabilidade.";
+
+    }else{
+
+        mensagem =
+        "📚 Continue estudando para aprender mais sobre o tema.";
+    }
+
+    document.getElementById("quiz-container").innerHTML = `
+        <h2>Resultado Final</h2>
+        <h3>${pontuacao} de ${perguntas.length} acertos</h3>
+        <p>${mensagem}</p>
+        <button onclick="location.reload()">
+            Refazer Quiz
+        </button>
+    `;
+}
+
+carregarPergunta();
