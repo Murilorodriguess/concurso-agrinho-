@@ -331,3 +331,52 @@ function mostrarResultado(){
 }
 
 carregarPergunta();
+// Seleciona o botão de alternar tema
+const botaoDarkMode = document.getElementById('toggle-darkmode');
+
+// Verifica se o usuário já tinha uma preferência salva anteriormente
+const temaSalvo = localStorage.getItem('tema');
+if (temaSalvo) {
+    document.documentElement.setAttribute('data-theme', temaSalvo);
+    if (temaSalvo === 'dark') {
+        botaoDarkMode.textContent = "☀️ Modo Claro";
+    }
+}
+
+// Adiciona evento de clique para mudar o tema
+botaoDarkMode.addEventListener('click', () => {
+    let temaAtual = document.documentElement.getAttribute('data-theme');
+    
+    if (temaAtual === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('tema', 'light');
+        botaoDarkMode.textContent = "🌓 Modo Escuro";
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('tema', 'dark');
+        botaoDarkMode.textContent = "☀️ Modo Claro";
+    }
+});
+
+// Função para rolar a página suavemente até o topo
+function voltarAoTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Animação simples de entrada ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.opacity = "0";
+        heroContent.style.transform = "translateY(20px)";
+        heroContent.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+        
+        setTimeout(() => {
+            heroContent.style.opacity = "1";
+            heroContent.style.transform = "translateY(0)";
+        }, 200);
+    }
+});
