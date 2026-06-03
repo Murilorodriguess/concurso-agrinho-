@@ -289,3 +289,138 @@ link.download="certificado.png";
 link.href=c.toDataURL();
 link.click();
 }
+// LOADING
+setTimeout(()=>{
+document.getElementById("loading").style.display="none";
+},2000);
+
+// SOM
+const ok = new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3");
+const no = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+// PARTICULAS SIMPLES
+setInterval(()=>{
+const dot = document.createElement("div");
+dot.innerHTML="🌱";
+dot.style.position="absolute";
+dot.style.left=Math.random()*100+"vw";
+dot.style.top="0";
+dot.style.fontSize="20px";
+dot.style.opacity="0.5";
+document.body.appendChild(dot);
+
+setTimeout(()=>dot.remove(),4000);
+},300);
+
+// QUIZ
+const q = [
+{p:"Melhor prática para o solo?",a:["Plantio Direto","Queimada","Desmatamento"],c:0},
+{p:"Sustentabilidade é?",a:["Uso consciente","Desperdício","Poluição"],c:0},
+{p:"Energia limpa é?",a:["Solar","Carvão","Diesel"],c:0}
+];
+
+let i=0,p=0,nome="";
+
+// START
+function start(){
+nome=document.getElementById("nome").value;
+if(!nome) return alert("Digite seu nome!");
+
+document.getElementById("home").classList.add("hidden");
+document.getElementById("quiz").classList.remove("hidden");
+
+load();
+}
+
+// LOAD
+function load(){
+
+document.getElementById("question").innerText=q[i].p;
+
+const box=document.getElementById("answers");
+box.innerHTML="";
+
+q[i].a.forEach((a,idx)=>{
+
+const b=document.createElement("button");
+b.innerText=a;
+
+b.onclick=()=>{
+
+if(idx==q[i].c){
+p++; ok.play();
+}else no.play();
+
+i++;
+
+if(i<q.length) load();
+else end();
+
+};
+
+box.appendChild(b);
+});
+}
+
+// END
+function end(){
+
+document.getElementById("quiz").classList.add("hidden");
+document.getElementById("result").classList.remove("hidden");
+
+let nivel=
+p==3?"🥇 LENDA":
+p==2?"🥈 EXPERT":
+"🥉 INICIANTE";
+
+let ranking=JSON.parse(localStorage.getItem("rank")||"[]");
+ranking.push({nome,p});
+localStorage.setItem("rank",JSON.stringify(ranking));
+
+document.getElementById("result").innerHTML=`
+<h1>${nome}</h1>
+<h2>${p}/3</h2>
+<h1>${nivel}</h1>
+<button onclick="cert()">Baixar Certificado</button>
+`;
+
+showRank();
+}
+
+// RANK
+function showRank(){
+let r=JSON.parse(localStorage.getItem("rank")||"[]");
+
+document.getElementById("list").innerHTML=
+r.map(x=>`<p>${x.nome} - ${x.p}</p>`).join("");
+}
+
+showRank();
+
+// CERTIFICADO ULTRA
+function cert(){
+
+const c=document.getElementById("cert");
+const ctx=c.getContext("2d");
+
+c.width=900;
+c.height=600;
+
+ctx.fillStyle="#0d3b1e";
+ctx.fillRect(0,0,c.width,c.height);
+
+ctx.fillStyle="white";
+ctx.font="40px Poppins";
+
+ctx.fillText("CERTIFICADO AGRINHO",180,200);
+ctx.font="30px Poppins";
+ctx.fillText("Nome: "+nome,180,280);
+ctx.fillText("Pontuação: "+p+"/3",180,340);
+
+ctx.fillText("Status: Sustentabilidade Ativa 🌱",180,420);
+
+let a=document.createElement("a");
+a.download="certificado.png";
+a.href=c.toDataURL();
+a.click();
+}
