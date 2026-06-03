@@ -284,3 +284,121 @@
   <script src="script.js"></script>
 </body>
 </html>
+<div class="section-title">
+    <h2>Compromisso com o Futuro</h2>
+
+    <p>
+        A agricultura sustentável é fundamental para garantir a produção
+        de alimentos sem comprometer os recursos naturais das próximas
+        gerações. No Brasil, práticas como plantio direto, rotação de
+        culturas e agricultura de precisão contribuem para aumentar a
+        produtividade e preservar o meio ambiente.
+
+        Este projeto foi desenvolvido para o Concurso Agrinho com o
+        objetivo de demonstrar como tecnologia e sustentabilidade podem
+        caminhar juntas no campo.
+    </p>
+</div> 
+<section class="estatisticas">
+    <div class="container">
+
+        <div class="stat-card">
+            <h2>95%</h2>
+            <p>Aproveitamento da água</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>35%</h2>
+            <p>Redução de emissões</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Rastreabilidade dos lotes</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>80%</h2>
+            <p>Uso de bioinsumos</p>
+        </div>
+
+    </div>
+</section>
+function buscarLote(){
+
+    const lote = document.getElementById("lote").value;
+    const resultado = document.getElementById("resultado");
+
+    if(lote === ""){
+        resultado.innerHTML = "Digite um número de lote.";
+        resultado.style.color = "red";
+        return;
+    }
+
+    resultado.style.color = "#0d3b1e";
+
+    resultado.innerHTML = `
+    <div class="lote-card">
+
+        <h3>Lote ${lote} ✅</h3>
+
+        <p><strong>Fazenda:</strong> Agro Verde Sustentável</p>
+
+        <p><strong>Localização:</strong> Paraná - Brasil</p>
+
+        <p><strong>Plantio:</strong> 12/03/2026</p>
+
+        <p><strong>Colheita:</strong> 28/07/2026</p>
+
+        <p><strong>Certificação:</strong> Produção Sustentável</p>
+
+        <p><strong>Economia de água:</strong> 30%</p>
+
+        <p><strong>Redução de carbono:</strong> 35%</p>
+
+        <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Lote-${lote}"
+        alt="QR Code">
+    </div>
+    `;
+}
+<div class="produto-card">
+
+    <img src="imagem.jpg" alt="Grãos">
+
+    <h3>Grãos Sustentáveis</h3>
+
+    <p>
+        Produzidos com plantio direto e manejo inteligente do solo.
+    </p>
+
+    <ul>
+        <li>🌱 Menor impacto ambiental</li>
+        <li>💧 Economia de água</li>
+        <li>♻ Produção rastreável</li>
+    </ul>
+
+</div> 
+<section class="quiz">
+
+    <div class="container">
+
+        <h2>Quiz Sustentável</h2>
+
+        <p>
+            Qual prática ajuda a conservar o solo?
+        </p>
+
+        <button onclick="respostaCorreta()">
+            Plantio Direto
+        </button>
+
+        <button onclick="respostaErrada()">
+            Desmatamento
+        </button>
+
+        <div id="quizResultado"></div>
+
+    </div>
+
+</section>
