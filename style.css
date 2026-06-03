@@ -570,3 +570,79 @@ section{
 html{
     scroll-behavior:smooth;
 }
+/* ESTATÍSTICAS */
+
+.estatisticas{
+    background:#0d3b1e;
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:white;
+    color:#0d3b1e;
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+}
+
+.stat-card h3{
+    font-size:50px;
+    color:#2e7d32;
+}
+
+/* QUIZ */
+
+.quiz{
+    background:#eef5ea;
+    text-align:center;
+}
+
+.quiz button{
+    margin:10px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#0d3b1e;
+    color:white;
+    font-weight:600;
+}
+
+.quiz button:hover{
+    background:#2e7d32;
+}
+
+#quizResultado{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* LOTE */
+
+.lote-card{
+
+    max-width:500px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.1);
+}
+
+.lote-card h3{
+    color:#0d3b1e;
+    margin-bottom:15px;
+}
+
+.lote-card img{
+    margin-top:20px;
+}
