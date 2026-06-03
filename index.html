@@ -311,3 +311,60 @@ carregarPergunta();
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agrinho Ultra Max</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+<h1>🌱 AgroSustentável</h1>
+<p>Carregando experiência...</p>
+</div>
+
+<!-- HOME -->
+<section id="home">
+<h1>🌾 Bem-vindo ao Futuro do Campo</h1>
+
+<input id="nome" placeholder="Digite seu nome">
+
+<button onclick="start()">Entrar</button>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="hidden">
+
+<div class="top">
+<h2 id="question"></h2>
+<div id="progress"></div>
+</div>
+
+<div id="answers"></div>
+
+</section>
+
+<!-- RESULT -->
+<section id="result" class="hidden"></section>
+
+<!-- RANKING -->
+<section id="ranking">
+<h2>🏆 Ranking</h2>
+<div id="list"></div>
+</section>
+
+<canvas id="cert" class="hidden"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
