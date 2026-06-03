@@ -253,3 +253,61 @@ carregarPergunta();
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agrinho 2026 - Projeto Campeão</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Agro<span>Sustentável</span></h1>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>🌱 Do Campo ao Futuro</h1>
+<p>Tecnologia + Sustentabilidade</p>
+
+<input id="nome" placeholder="Digite seu nome">
+<button onclick="iniciar()">Iniciar Projeto</button>
+</div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="hidden">
+<h2 id="pergunta"></h2>
+<div id="alternativas"></div>
+</section>
+
+<!-- RESULTADO -->
+<section id="resultado" class="hidden"></section>
+
+<!-- RANKING -->
+<section class="ranking">
+<h2>🏆 Ranking Local</h2>
+<div id="listaRanking"></div>
+</section>
+
+<!-- GRÁFICO -->
+<section>
+<h2>📊 Impacto Ambiental</h2>
+<canvas id="grafico"></canvas>
+</section>
+
+<!-- CERTIFICADO -->
+<canvas id="certificado" class="hidden"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
