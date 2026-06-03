@@ -702,3 +702,44 @@ html{
 #resultadoQuiz{
     margin-top:20px;
 }
+.video-container{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.05);
+}
+
+.timeline{
+    background:#eef5ea;
+}
+
+.timeline-item{
+    background:white;
+    margin:15px auto;
+    padding:20px;
+    max-width:600px;
+    border-left:5px solid #0d3b1e;
+    border-radius:10px;
+}
+
+.contato-extra{
+    margin-top:40px;
+    text-align:center;
+}
