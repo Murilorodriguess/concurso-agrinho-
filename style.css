@@ -743,3 +743,237 @@ html{
     margin-top:40px;
     text-align:center;
 }
+/* Configurações Gerais e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-principal: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #1b5e20;
+    --cor-fundo: #ffffff;
+    --cor-texto: #333333;
+    --cor-card-fundo: #f4fbf4;
+    --bg-alternativo: #f9f9f9;
+}
+
+/* Variáveis para o Modo Escuro */
+[data-theme="dark"] {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-card-fundo: #1e291e;
+    --bg-alternativo: #1c1c1c;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* Menu de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--cor-fundo);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.logo span {
+    color: var(--cor-texto);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-principal);
+}
+
+.btn-darkmode {
+    background: none;
+    border: 2px solid var(--cor-principal);
+    color: var(--cor-texto);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-darkmode:hover {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Seção Inicial (Hero) */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-principal:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-alternativo);
+}
+
+.content-section h2 {
+    font-size: 32px;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    margin-bottom: 40px;
+    color: #777;
+}
+
+/* Containers de Cards (Layout Flexbox Flexível) */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card, .card-tech {
+    background-color: var(--cor-card-fundo);
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-top: 5px solid var(--cor-principal);
+    transition: transform 0.2s;
+}
+
+.card:hover, .card-tech:hover {
+    transform: translateY(-5px);
+}
+
+.card h3, .card-tech h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Seção Sobre */
+.sobre-container {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.creditos {
+    margin-top: 30px;
+    background: var(--cor-card-fundo);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.btn-topo {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-topo:hover {
+    background: white;
+    color: #1b5e20;
+}
+
+/* Ajustes para Celular (Responsividade) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        padding: 0;
+    }
+    .hero-content h1 {
+        font-size: 28px;
+    }
+}
