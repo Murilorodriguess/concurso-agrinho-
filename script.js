@@ -45,3 +45,29 @@ form.addEventListener("submit", (e) => {
   form.reset();
 
 });
+function respostaCorreta(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "✅ Correto! O plantio direto ajuda a conservar o solo.";
+
+}
+
+function respostaErrada(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "❌ Resposta incorreta.";
+
+}
+function respostaCorreta(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "✅ Correto! O plantio direto ajuda a conservar o solo.";
+
+}
+
+function respostaErrada(){
+
+    document.getElementById("quizResultado").innerHTML =
+    "❌ Resposta incorreta.";
+
+}
