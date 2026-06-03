@@ -1,701 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AgroSustentável</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css"/>
+<title>AgroSustentável | Concurso Agrinho 2026</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* TODO O CSS AQUI */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7f3;
+color:#333;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* continue colando todo o seu CSS aqui */
+
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav">
-      <h1 class="logo">Agro<span>Sustentável</span></h1>
+<header class="header">
+  <div class="container nav">
+    <h1 class="logo">Agro<span>Sustentável</span></h1>
 
-      <nav>
-        <ul class="menu">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#praticas">Práticas</a></li>
-          <li><a href="#rastreamento">Rastreabilidade</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#praticas">Práticas</a></li>
+        <li><a href="#rastreamento">Rastreabilidade</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-      <button id="menu-btn">☰</button>
-    </div>
-  </header>
+    <button id="menu-btn">☰</button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="overlay"></div>
+<section class="hero">
+  <div class="overlay"></div>
 
-    <div class="hero-content">
-      <h2>Produção Agrícola com Responsabilidade Ambiental</h2>
+  <div class="hero-content">
 
-      <p>
-        Tecnologia, rastreabilidade e sustentabilidade
-        para um agronegócio mais eficiente e consciente.
-      </p>
-
-      <a href="#produtos" class="btn">Conheça nossos produtos</a>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="sobre" id="sobre">
-    <div class="container">
-      <div class="section-title">
-        <h2>Compromisso com o Futuro</h2>
-        <p>
-          Atuamos com foco em práticas agrícolas sustentáveis,
-          preservação ambiental e inovação tecnológica.
-        </p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3>🌱 ESG</h3>
-          <p>
-            Aplicamos princípios ambientais, sociais e de governança
-            em toda cadeia produtiva.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>✅ Certificações</h3>
-          <p>
-            Produção alinhada às normas ambientais e certificações
-            reconhecidas internacionalmente.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>📍 Transparência</h3>
-          <p>
-            Rastreabilidade completa do plantio até a entrega final.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRÁTICAS -->
-  <section class="praticas" id="praticas">
-    <div class="container praticas-grid">
-
-      <div class="praticas-text">
-        <h2>Práticas Agrícolas Sustentáveis</h2>
-
-        <ul>
-          <li>✔ Plantio Direto</li>
-          <li>✔ Rotação de Culturas</li>
-          <li>✔ Manejo Integrado de Pragas</li>
-          <li>✔ Agricultura de Precisão</li>
-          <li>✔ Irrigação Inteligente</li>
-          <li>✔ Bioinsumos e Controle Biológico</li>
-        </ul>
-
-        <p>
-          Utilizamos drones, sensores e softwares agrícolas
-          para reduzir desperdícios e aumentar a produtividade.
-        </p>
-      </div>
-
-      <div class="praticas-img">
-        <img
-          src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop"
-          alt="Agronegócio sustentável"
-        />
-      </div>
-
-    </div>
-  </section>
-
-  <!-- RASTREAMENTO -->
-  <section class="rastreamento" id="rastreamento">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Rastreabilidade</h2>
-        <p>
-          Consulte o histórico de produção através do lote do produto.
-        </p>
-      </div>
-
-      <div class="rastreamento-box">
-        <input
-          type="text"
-          id="lote"
-          placeholder="Digite o número do lote"
-        />
-
-        <button onclick="buscarLote()">
-          Consultar
-        </button>
-      </div>
-
-      <div id="resultado"></div>
-
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="produtos" id="produtos">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Nossos Produtos</h2>
-      </div>
-
-      <div class="cards">
-
-        <div class="produto-card">
-          <img
-            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
-            alt="Grãos"
-          />
-
-          <h3>Grãos Sustentáveis</h3>
-
-          <p>
-            Produção responsável com foco em qualidade e preservação ambiental.
-          </p>
-        </div>
-
-        <div class="produto-card">
-          <img
-            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop"
-            alt="Hortifrúti"
-          />
-
-          <h3>Hortifrúti Orgânico</h3>
-
-          <p>
-            Produtos frescos cultivados com técnicas ecológicas.
-          </p>
-        </div>
-
-        <div class="produto-card">
-          <img
-            src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&w=1200&auto=format&fit=crop"
-            alt="Tecnologia agrícola"
-          />
-
-          <h3>Tecnologia Agrícola</h3>
-
-          <p>
-            Soluções inteligentes para aumentar produtividade e eficiência.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section class="blog" id="blog">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Central de Notícias</h2>
-      </div>
-
-      <div class="blog-grid">
-
-        <article class="blog-card">
-          <h3>Como o Plantio Direto reduz impactos ambientais</h3>
-          <p>
-            Entenda os benefícios da conservação do solo e retenção de carbono.
-          </p>
-          <a href="#">Ler mais →</a>
-        </article>
-
-        <article class="blog-card">
-          <h3>Bioinsumos: o futuro da agricultura sustentável</h3>
-          <p>
-            Descubra como os biofertilizantes estão revolucionando o campo.
-          </p>
-          <a href="#">Ler mais →</a>
-        </article>
-
-        <article class="blog-card">
-          <h3>Tecnologia no agro</h3>
-          <p>
-            Drones e sensores inteligentes aumentam produtividade no campo.
-          </p>
-          <a href="#">Ler mais →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contato" id="contato">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Entre em Contato</h2>
-      </div>
-
-      <form class="form">
-
-        <input type="text" placeholder="Seu nome" required>
-
-        <input type="email" placeholder="Seu e-mail" required>
-
-        <textarea
-          placeholder="Digite sua mensagem"
-          rows="6"
-          required
-        ></textarea>
-
-        <button type="submit">
-          Enviar Mensagem
-        </button>
-
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>
-        © 2026 AgroSustentável | Todos os direitos reservados.
-      </p>
-
-      <p>
-        CNPJ: 00.000.000/0001-00 |
-        Política de Privacidade |
-        LGPD
-      </p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<div class="section-title">
-    <h2>Compromisso com o Futuro</h2>
+    <h2>
+      Produção Agrícola com Responsabilidade Ambiental
+    </h2>
 
     <p>
-        A agricultura sustentável é fundamental para garantir a produção
-        de alimentos sem comprometer os recursos naturais das próximas
-        gerações. No Brasil, práticas como plantio direto, rotação de
-        culturas e agricultura de precisão contribuem para aumentar a
-        produtividade e preservar o meio ambiente.
-
-        Este projeto foi desenvolvido para o Concurso Agrinho com o
-        objetivo de demonstrar como tecnologia e sustentabilidade podem
-        caminhar juntas no campo.
-    </p>
-</div> 
-<section class="estatisticas">
-    <div class="container">
-
-        <div class="stat-card">
-            <h2>95%</h2>
-            <p>Aproveitamento da água</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>35%</h2>
-            <p>Redução de emissões</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>100%</h2>
-            <p>Rastreabilidade dos lotes</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>80%</h2>
-            <p>Uso de bioinsumos</p>
-        </div>
-
-    </div>
-</section>
-function buscarLote(){
-
-    const lote = document.getElementById("lote").value;
-    const resultado = document.getElementById("resultado");
-
-    if(lote === ""){
-        resultado.innerHTML = "Digite um número de lote.";
-        resultado.style.color = "red";
-        return;
-    }
-
-    resultado.style.color = "#0d3b1e";
-
-    resultado.innerHTML = `
-    <div class="lote-card">
-
-        <h3>Lote ${lote} ✅</h3>
-
-        <p><strong>Fazenda:</strong> Agro Verde Sustentável</p>
-
-        <p><strong>Localização:</strong> Paraná - Brasil</p>
-
-        <p><strong>Plantio:</strong> 12/03/2026</p>
-
-        <p><strong>Colheita:</strong> 28/07/2026</p>
-
-        <p><strong>Certificação:</strong> Produção Sustentável</p>
-
-        <p><strong>Economia de água:</strong> 30%</p>
-
-        <p><strong>Redução de carbono:</strong> 35%</p>
-
-        <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Lote-${lote}"
-        alt="QR Code">
-    </div>
-    `;
-}
-<div class="produto-card">
-
-    <img src="imagem.jpg" alt="Grãos">
-
-    <h3>Grãos Sustentáveis</h3>
-
-    <p>
-        Produzidos com plantio direto e manejo inteligente do solo.
+      Projeto Educacional desenvolvido para o Concurso Agrinho 2026
     </p>
 
-    <ul>
-        <li>🌱 Menor impacto ambiental</li>
-        <li>💧 Economia de água</li>
-        <li>♻ Produção rastreável</li>
-    </ul>
-
-</div> 
-<section class="quiz">
-
-    <div class="container">
-
-        <h2>Quiz Sustentável</h2>
-
-        <p>
-            Qual prática ajuda a conservar o solo?
-        </p>
-
-        <button onclick="respostaCorreta()">
-            Plantio Direto
-        </button>
-
-        <button onclick="respostaErrada()">
-            Desmatamento
-        </button>
-
-        <div id="quizResultado"></div>
-
-    </div>
-
-</section>
-<section class="estatisticas">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Impacto Sustentável</h2>
-        </div>
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3 class="contador" data-target="35">0</h3>
-                <p>% menos emissão de carbono</p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="contador" data-target="30">0</h3>
-                <p>% economia de água</p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="contador" data-target="100">0</h3>
-                <p>% dos lotes rastreados</p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="contador" data-target="80">0</h3>
-                <p>% uso de bioinsumos</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section class="quiz">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Quiz Sustentável</h2>
-        </div>
-
-        <p>
-            Qual prática ajuda a preservar o solo e reduzir a erosão?
-        </p>
-
-        <button onclick="quizCorreto()">
-            Plantio Direto
-        </button>
-
-        <button onclick="quizErrado()">
-            Desmatamento
-        </button>
-
-        <button onclick="quizErrado()">
-            Queimadas
-        </button>
-
-        <div id="quizResultado"></div>
-
-    </div>
-
-</section>
-<footer class="footer">
-    <div class="container">
-
-        <p>
-            Projeto Educacional desenvolvido para o Concurso Agrinho 2026
-        </p>
-
-        <p>
-            Sustentabilidade, Tecnologia e Responsabilidade Ambiental
-        </p>
-
-    </div>
-</footer>
-<section class="quiz">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Quiz: Você conhece a Agricultura Sustentável?</h2>
-            <p>Responda às perguntas e descubra sua pontuação.</p>
-        </div>
-
-        <div id="quiz-container">
-
-            <h3 id="pergunta"></h3>
-
-            <div id="alternativas"></div>
-
-            <button id="proximaBtn" onclick="proximaPergunta()" style="display:none;">
-                Próxima Pergunta
-            </button>
-
-            <div id="resultadoQuiz"></div>
-
-        </div>
-
-    </div>
-</section>
-<section class="video-section">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Conheça a Agricultura Sustentável</h2>
-            <p>
-                Assista ao vídeo e descubra como a tecnologia ajuda a preservar o meio ambiente.
-            </p>
-        </div>
-
-        <div class="video-container">
-            <iframe
-                width="100%"
-                height="500"
-                src="https://www.youtube.com/embed/7Q5M6jT5g6A"
-                title="Agricultura Sustentável"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </div>
-</section>
-<section class="galeria">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Galeria do Campo</h2>
-        </div>
-
-        <div class="galeria-grid">
-
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" alt="Campo">
-
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800" alt="Plantação">
-
-            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800" alt="Agricultura">
-
-            <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=800" alt="Tecnologia">
-
-        </div>
-
-    </div>
-
-</section>
-<div class="contato-extra">
-
-    <h3>Informações de Contato</h3>
-
-    <p>📞 WhatsApp: (45) 99851-4350</p>
-
-    <p>📧 Email: contato@agrosustentavel.com</p>
-
-    <p>📍 Paraná - Brasil</p>
-
-    <a
-      href="https://wa.me/5545998514350"
-      target="_blank"
-      class="btn">
-      Falar no WhatsApp
+    <a href="#produtos" class="btn">
+      Conheça nossos produtos
     </a>
 
+  </div>
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+  <!-- conteúdo -->
+</section>
+
+<!-- ESTATÍSTICAS -->
+
+<section class="estatisticas">
+  <!-- conteúdo -->
+</section>
+
+<!-- PRÁTICAS -->
+
+<section id="praticas">
+  <!-- conteúdo -->
+</section>
+
+<!-- RASTREABILIDADE -->
+
+<section id="rastreamento">
+
+<input
+type="text"
+id="lote"
+placeholder="Digite o lote">
+
+<button onclick="buscarLote()">
+Consultar
+</button>
+
+<div id="resultado"></div>
+
+</section>
+
+<!-- PRODUTOS -->
+
+<section id="produtos">
+<!-- cards -->
+</section>
+
+<!-- VÍDEO -->
+
+<section class="video-section">
+
+<h2>Vídeo Educativo</h2>
+
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/7Q5M6jT5g6A"
+allowfullscreen>
+</iframe>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quiz">
+
+<h2>Quiz Sustentável</h2>
+
+<div id="quiz-container">
+
+<h3 id="pergunta"></h3>
+
+<div id="alternativas"></div>
+
+<button
+id="proximaBtn"
+onclick="proximaPergunta()">
+
+Próxima
+
+</button>
+
 </div>
-<section class="timeline">
 
-    <div class="container">
+</section>
 
-        <div class="section-title">
-            <h2>Ciclo de Produção</h2>
-        </div>
+<!-- CONTATO -->
 
-        <div class="timeline-item">
-            🌱 Plantio - Março
-        </div>
+<section id="contato">
 
-        <div class="timeline-item">
-            💧 Irrigação Inteligente - Abril
-        </div>
+<h2>Contato</h2>
 
-        <div class="timeline-item">
-            🚁 Monitoramento por Drones - Maio
-        </div>
+<p>📞 WhatsApp: (45) 99851-4350</p>
 
-        <div class="timeline-item">
-            🌾 Colheita - Julho
-        </div>
+<a
+href="https://wa.me/5545998514350"
+target="_blank"
+class="btn">
 
-        <div class="timeline-item">
-            🚚 Distribuição - Agosto
-        </div>
+Falar no WhatsApp
 
-    </div>
+</a>
 
 </section>
 
 <footer class="footer">
-    <div class="container">
 
-        <p>
-            Projeto Educacional desenvolvido para o Concurso Agrinho 2026
-        </p>
+<p>
+Projeto Educacional desenvolvido para o Concurso Agrinho 2026
+</p>
 
-        <p>
-            Tema: Agricultura Sustentável, Tecnologia e Preservação Ambiental
-        </p>
+<p>
+Desenvolvido por Murilo Rodrigues
+</p>
 
-        <p>
-            Desenvolvido por Murilo Rodrigues
-        </p>
-
-    </div>
 </footer>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concurso Agrinho - Inovação e Sustentabilidade</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <header class="navbar">
-        <div class="logo">Agrinho<span>Inova</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#inovacao">Inovação</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
-        <button id="toggle-darkmode" class="btn-darkmode">🌓 Modo Escuro</button>
-    </header>
+<script>
 
-    <section id="inicio" class="hero-section">
-        <div class="hero-content animate-up">
-            <h1>Do Campo à Cidade: Colhendo Oportunidades</h1>
-            <p>Conectando a tecnologia urbana à força do agronegócio para construir um futuro sustentável.</p>
-            <a href="#sustentabilidade" class="btn-principal">Saber Mais</a>
-        </div>
-    </section>
+/* MENU */
 
-    <section id="sustentabilidade" class="content-section">
-        <h2>Sustentabilidade no Campo</h2>
-        <p class="subtitulo">Práticas que protegem o meio ambiente e garantem o futuro das próximas gerações.</p>
-        
-        <div class="cards-container">
-            <div class="card">
-                <h3>Preservação de Recursos</h3>
-                <p>Uso consciente da água através de irrigação inteligente e proteção de nascentes locais.</p>
-            </div>
-            <div class="card">
-                <h3>Energias Renováveis</h3>
-                <p>Adoção de painéis solares e biomassa para gerar energia limpa diretamente nas propriedades rurais.</p>
-            </div>
-        </div>
-    </section>
+const menuBtn =
+document.getElementById("menu-btn");
 
-    <section id="inovacao" class="content-section bg-light">
-        <h2>Inovação Tecnológica</h2>
-        <p class="subtitulo">Como a tecnologia transforma a produtividade e a vida do produtor rural.</p>
-        
-        <div class="cards-container">
-            <div class="card-tech">
-                <h4>Drones e Sensores</h4>
-                <p>Monitoramento em tempo real da saúde das plantas e análise precisa do solo urbano e rural.</p>
-            </div>
-            <div class="card-tech">
-                <h4>Automação</h4>
-                <p>Maquinários inteligentes que reduzem o desperdício de insumos e aumentam a colheita.</p>
-            </div>
-        </div>
-    </section>
+const menu =
+document.querySelector(".menu");
 
-    <section id="sobre" class="content-section">
-        <h2>Sobre o Projeto</h2>
-        <div class="sobre-container">
-            <p>Este site foi desenvolvido para o **Concurso Agrinho**, buscando demonstrar como a tecnologia e a sustentabilidade andam de mãos dadas para unir o campo e a cidade.</p>
-            <div class="creditos">
-                <p><strong>Desenvolvedor:</strong> Murilo Rodrigues</p>
-                <p><strong>Escola:</strong> Colégio Estadual</p>
-                <p><strong>Tecnologias:</strong> HTML5, CSS3 e JavaScript</p>
-            </div>
-        </div>
-    </section>
+menuBtn.addEventListener("click",()=>{
 
-    <footer>
-        <p>&copy; 2026 Concurso Agrinho. Todos os direitos reservados.</p>
-        <button onclick="voltarAoTopo()" class="btn-topo">↑ Voltar ao topo</button>
-    </footer>
+menu.classList.toggle("active");
 
-    <script src="script.js"></script>
+});
+
+/* RASTREABILIDADE */
+
+function buscarLote(){
+
+const lote =
+document.getElementById("lote").value;
+
+const resultado =
+document.getElementById("resultado");
+
+resultado.innerHTML=`
+<h3>Lote ${lote}</h3>
+<p>Produção Sustentável</p>
+`;
+
+}
+
+/* QUIZ */
+
+const perguntas = [
+{
+pergunta:"Qual prática reduz a erosão do solo?",
+alternativas:[
+"Plantio Direto",
+"Queimadas",
+"Desmatamento"
+],
+correta:0
+}
+];
+
+let perguntaAtual = 0;
+
+function carregarPergunta(){
+
+document.getElementById("pergunta")
+.innerHTML =
+perguntas[0].pergunta;
+
+}
+
+carregarPergunta();
+
+</script>
+
 </body>
 </html>
