@@ -424,3 +424,51 @@ a.download="certificado.png";
 a.href=c.toDataURL();
 a.click();
 }
+function buscarLote(){
+  const lote = document.getElementById("lote").value;
+  const resultado = document.getElementById("resultado");
+
+  if(!lote){
+    resultado.innerHTML = "<p>Digite um lote.</p>";
+    return;
+  }
+
+  resultado.innerHTML = `
+  <div class="lote-card">
+    <h3>Lote ${lote} ✔</h3>
+    <p>Fazenda: Agro Sustentável</p>
+    <p>Local: Paraná, Brasil</p>
+    <p>Data do plantio: 15/03/2026</p>
+    <p>Data da colheita: 20/07/2026</p>
+    <p>Certificações: Orgânico, Sustentável</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${lote}">
+    <div id="mapa-lote" style="width:100%;height:200px;margin-top:10px;"></div>
+  </div>
+  `;
+
+  // Inicializando mapa (Leaflet)
+  const map = L.map('mapa-lote').setView([-25.4284, -49.2733], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker([-25.4284, -49.2733]).addTo(map)
+      .bindPopup(`Lote ${lote}`)
+      .openPopup();
+}
+const counters = document.querySelectorAll(".contador");
+
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute("data-target");
+    let value = +counter.innerText;
+    const inc = target/50;
+    if(value < target){
+      counter.innerText = Math.ceil(value+inc);
+      setTimeout(update,30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+
