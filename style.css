@@ -396,3 +396,27 @@ background:#111;
 
 /* ANIMAÇÃO */
 .hidden{display:none;}
+.produto-card:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+:root {
+  --verde-escuro: #2E7D32;
+  --verde-claro: #81C784;
+  --bege: #F5F5DC;
+  --marrom-terra: #8D6E63;
+}
+
+body{
+  background: var(--bege);
+  color: #333;
+}
+
+.header, .footer{
+  background: var(--verde-escuro);
+}
+
+.btn{
+  background: var(--verde-claro);
+}
+
