@@ -368,3 +368,59 @@ carregarPergunta();
 <script src="script.js"></script>
 </body>
 </html>
+<section id="sobre">
+  <div class="container">
+    <h2>Sobre o Projeto</h2>
+    <p>
+      Na Fazenda Agro Sustentável, implementamos práticas de agricultura inteligente que reduziram:
+    </p>
+    <ul>
+      <li>💧 Consumo de água em 30% através de irrigação por gotejamento</li>
+      <li>🌱 Uso de defensivos químicos em 50% via controle biológico</li>
+      <li>🌍 Emissão de carbono em 20% com energia solar nas estufas</li>
+    </ul>
+    <p>
+      Trabalhamos com cooperativas locais e priorizamos produtos certificados e de alta qualidade.
+    </p>
+  </div>
+</section> 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- no <head> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- no body, no final -->
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<div class="card" data-aos="fade-up">
+  <h3>Plantio Direto</h3>
+  <p>Reduz erosão e mantém o solo fértil.</p>
+</div>
+<div class="produto-card" data-aos="zoom-in">
+  <h3>Milho Orgânico</h3>
+  <p>Produzido com economia de água 💧 e sem agrotóxicos 🌱</p>
+  <p>Certificações: Orgânico, Fair Trade</p>
+  <button class="btn">Saiba mais</button>
+</div>
+<div class="stat-card">
+  <h3 class="contador" data-target="5000">0</h3>
+  <p>Hectares monitorados</p>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p>Projeto Educacional para o Concurso Agrinho 2026</p>
+    <p>Desenvolvido por Murilo Rodrigues</p>
+    <p>Email: contato@agrosustentavel.com | 📞 (45) 99851-4350</p>
+    <p>
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="#" target="_blank">Instagram</a> |
+      <a href="#" target="_blank">LinkedIn</a>
+    </p>
+    <p>✅ LGPD | Certificações Sustentáveis</p>
+  </div>
+</footer>
