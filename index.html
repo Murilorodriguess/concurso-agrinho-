@@ -10,78 +10,87 @@
 <body>
 
 <header>
-    <nav>
-        <div class="logo">🌱 Agro Paraná</div>
-        <div class="menu">
-            <a href="#dados">Dados</a>
-            <a href="#grafico">Gráfico</a>
-            <a href="#curiosidades">Curiosidades</a>
-            <a href="#videos">Vídeos</a>
-        </div>
-    </nav>
+<nav>
+<div class="logo">🌱 Agro Paraná</div>
+<div class="menu">
+<a href="#dados">Dados</a>
+<a href="#grafico">Gráfico</a>
+<a href="#curiosidades">Curiosidades</a>
+<a href="#mapa">Mapa</a>
+<a href="#videos">Vídeos</a>
+</div>
+</nav>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>A Força do Agronegócio Paranaense</h1>
-        <p>O Paraná está entre os maiores produtores agrícolas do Brasil, destacando-se na produção de soja, milho, trigo, frango e suínos.</p>
-    </div>
+<div class="hero-content">
+<h1>A Força do Agronegócio Paranaense</h1>
+<p>O Paraná é destaque na produção de soja, milho, trigo, frango e suínos.</p>
+</div>
 </section>
 
 <section id="dados">
-    <h2 class="titulo">Indicadores do Setor</h2>
-    <div class="stats">
-        <div class="card">
-            <div class="numero" data-target="400">0</div>
-            <p>Mil propriedades rurais</p>
-        </div>
-        <div class="card">
-            <div class="numero" data-target="20">0</div>
-            <p>Milhões de hectares cultivados</p>
-        </div>
-        <div class="card">
-            <div class="numero" data-target="150">0</div>
-            <p>Países importadores</p>
-        </div>
-        <div class="card">
-            <div class="numero" data-target="100">0</div>
-            <p>Bilhões movimentados (R$)</p>
-        </div>
-    </div>
+<h2 class="titulo">Indicadores do Setor</h2>
+<div class="stats">
+<div class="card">
+<div class="numero" data-target="400">0</div>
+<p>Mil propriedades rurais</p>
+</div>
+<div class="card">
+<div class="numero" data-target="20">0</div>
+<p>Milhões de hectares cultivados</p>
+</div>
+<div class="card">
+<div class="numero" data-target="150">0</div>
+<p>Países importadores</p>
+</div>
+<div class="card">
+<div class="numero" data-target="100">0</div>
+<p>Bilhões movimentados (R$)</p>
+</div>
+</div>
 </section>
 
 <section id="grafico">
-    <h2 class="titulo">Produção Agrícola</h2>
-    <div class="chart-container">
-        <canvas id="graficoProducao"></canvas>
-    </div>
-</section>
-
-<section>
-    <h2 class="titulo">Regiões Agrícolas do Paraná</h2>
-    <div class="mapa">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Parana_Municip.svg" alt="Mapa do Paraná">
-    </div>
+<h2 class="titulo">Produção Agrícola</h2>
+<div class="chart-container">
+<canvas id="graficoProducao"></canvas>
+</div>
 </section>
 
 <section id="curiosidades">
-    <h2 class="titulo">Curiosidades</h2>
-    <div class="curiosidade-box">
-        <p id="curiosidade">O Paraná é líder nacional na produção de carne de frango.</p>
-        <button id="btnCuriosidade">Nova Curiosidade</button>
-    </div>
+<h2 class="titulo">Curiosidades</h2>
+<div class="curiosidade-box">
+<p id="curiosidade">O Paraná é líder nacional na produção de carne de frango.</p>
+<button id="btnCuriosidade">Nova Curiosidade</button>
+</div>
+</section>
+
+<section id="mapa">
+<h2 class="titulo">Mapa Interativo do Paraná</h2>
+<div class="mapa-container">
+<svg viewBox="0 0 800 600">
+<!-- Exemplo simplificado de regiões -->
+<path id="londrina" d="M100,100 L200,100 L200,200 L100,200 Z" fill="#66BB6A" stroke="#fff" stroke-width="2"/>
+<path id="maringa" d="M210,100 L310,100 L310,200 L210,200 Z" fill="#43A047" stroke="#fff" stroke-width="2"/>
+<path id="cascavel" d="M100,210 L200,210 L200,310 L100,310 Z" fill="#2E7D32" stroke="#fff" stroke-width="2"/>
+<path id="toledo" d="M210,210 L310,210 L310,310 L210,310 Z" fill="#1B5E20" stroke="#fff" stroke-width="2"/>
+<path id="curitiba" d="M160,320 L260,320 L260,420 L160,420 Z" fill="#81C784" stroke="#fff" stroke-width="2"/>
+</svg>
+<div id="info-regiao">Passe o mouse sobre uma região</div>
+</div>
 </section>
 
 <section id="videos">
-    <h2 class="titulo">Vídeos Sobre o Agronegócio</h2>
-    <div class="videos">
-        <iframe src="https://www.youtube.com/embed/EQ6oS7n6j5A" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/qoJ9sKx8YlY" allowfullscreen></iframe>
-    </div>
+<h2 class="titulo">Vídeos Sobre o Agronegócio</h2>
+<div class="videos">
+<iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/M7lc1UVf-VE" allowfullscreen></iframe>
+</div>
 </section>
 
 <footer>
-    <p>Projeto AGRINHO © 2026</p>
+<p>Projeto Educacional - Agronegócio no Paraná © 2026</p>
 </footer>
 
 <script src="script.js"></script>
