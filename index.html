@@ -3,424 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AgroSustentável | Concurso Agrinho 2026</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* TODO O CSS AQUI */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#f5f7f3;
-color:#333;
-line-height:1.6;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* continue colando todo o seu CSS aqui */
-
-</style>
-</head>
-
-<body>
-
-<header class="header">
-  <div class="container nav">
-    <h1 class="logo">Agro<span>Sustentável</span></h1>
-
-    <nav>
-      <ul class="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#praticas">Práticas</a></li>
-        <li><a href="#rastreamento">Rastreabilidade</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#quiz">Quiz</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <button id="menu-btn">☰</button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-
-    <h2>
-      Produção Agrícola com Responsabilidade Ambiental
-    </h2>
-
-    <p>
-      Projeto Educacional desenvolvido para o Concurso Agrinho 2026
-    </p>
-
-    <a href="#produtos" class="btn">
-      Conheça nossos produtos
-    </a>
-
-  </div>
-</section>
-
-<!-- SOBRE -->
-
-<section id="sobre">
-  <!-- conteúdo -->
-</section>
-
-<!-- ESTATÍSTICAS -->
-
-<section class="estatisticas">
-  <!-- conteúdo -->
-</section>
-
-<!-- PRÁTICAS -->
-
-<section id="praticas">
-  <!-- conteúdo -->
-</section>
-
-<!-- RASTREABILIDADE -->
-
-<section id="rastreamento">
-
-<input
-type="text"
-id="lote"
-placeholder="Digite o lote">
-
-<button onclick="buscarLote()">
-Consultar
-</button>
-
-<div id="resultado"></div>
-
-</section>
-
-<!-- PRODUTOS -->
-
-<section id="produtos">
-<!-- cards -->
-</section>
-
-<!-- VÍDEO -->
-
-<section class="video-section">
-
-<h2>Vídeo Educativo</h2>
-
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/7Q5M6jT5g6A"
-allowfullscreen>
-</iframe>
-
-</section>
-
-<!-- QUIZ -->
-
-<section id="quiz">
-
-<h2>Quiz Sustentável</h2>
-
-<div id="quiz-container">
-
-<h3 id="pergunta"></h3>
-
-<div id="alternativas"></div>
-
-<button
-id="proximaBtn"
-onclick="proximaPergunta()">
-
-Próxima
-
-</button>
-
-</div>
-
-</section>
-
-<!-- CONTATO -->
-
-<section id="contato">
-
-<h2>Contato</h2>
-
-<p>📞 WhatsApp: (45) 99851-4350</p>
-
-<a
-href="https://wa.me/5545998514350"
-target="_blank"
-class="btn">
-
-Falar no WhatsApp
-
-</a>
-
-</section>
-
-<footer class="footer">
-
-<p>
-Projeto Educacional desenvolvido para o Concurso Agrinho 2026
-</p>
-
-<p>
-Desenvolvido por Murilo Rodrigues
-</p>
-
-</footer>
-
-<script>
-
-/* MENU */
-
-const menuBtn =
-document.getElementById("menu-btn");
-
-const menu =
-document.querySelector(".menu");
-
-menuBtn.addEventListener("click",()=>{
-
-menu.classList.toggle("active");
-
-});
-
-/* RASTREABILIDADE */
-
-function buscarLote(){
-
-const lote =
-document.getElementById("lote").value;
-
-const resultado =
-document.getElementById("resultado");
-
-resultado.innerHTML=`
-<h3>Lote ${lote}</h3>
-<p>Produção Sustentável</p>
-`;
-
-}
-
-/* QUIZ */
-
-const perguntas = [
-{
-pergunta:"Qual prática reduz a erosão do solo?",
-alternativas:[
-"Plantio Direto",
-"Queimadas",
-"Desmatamento"
-],
-correta:0
-}
-];
-
-let perguntaAtual = 0;
-
-function carregarPergunta(){
-
-document.getElementById("pergunta")
-.innerHTML =
-perguntas[0].pergunta;
-
-}
-
-carregarPergunta();
-
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Agrinho 2026 - Projeto Campeão</title>
-
+<title>Agronegócio no Paraná</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
 
 <header>
-<h1>Agro<span>Sustentável</span></h1>
+    <nav>
+        <div class="logo">🌱 Agro Paraná</div>
+        <div class="menu">
+            <a href="#dados">Dados</a>
+            <a href="#grafico">Gráfico</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <a href="#videos">Vídeos</a>
+        </div>
+    </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>🌱 Do Campo ao Futuro</h1>
-<p>Tecnologia + Sustentabilidade</p>
-
-<input id="nome" placeholder="Digite seu nome">
-<button onclick="iniciar()">Iniciar Projeto</button>
-</div>
+    <div class="hero-content">
+        <h1>A Força do Agronegócio Paranaense</h1>
+        <p>O Paraná está entre os maiores produtores agrícolas do Brasil, destacando-se na produção de soja, milho, trigo, frango e suínos.</p>
+    </div>
 </section>
 
-<!-- QUIZ -->
-<section id="quiz" class="hidden">
-<h2 id="pergunta"></h2>
-<div id="alternativas"></div>
+<section id="dados">
+    <h2 class="titulo">Indicadores do Setor</h2>
+    <div class="stats">
+        <div class="card">
+            <div class="numero" data-target="400">0</div>
+            <p>Mil propriedades rurais</p>
+        </div>
+        <div class="card">
+            <div class="numero" data-target="20">0</div>
+            <p>Milhões de hectares cultivados</p>
+        </div>
+        <div class="card">
+            <div class="numero" data-target="150">0</div>
+            <p>Países importadores</p>
+        </div>
+        <div class="card">
+            <div class="numero" data-target="100">0</div>
+            <p>Bilhões movimentados (R$)</p>
+        </div>
+    </div>
 </section>
 
-<!-- RESULTADO -->
-<section id="resultado" class="hidden"></section>
-
-<!-- RANKING -->
-<section class="ranking">
-<h2>🏆 Ranking Local</h2>
-<div id="listaRanking"></div>
+<section id="grafico">
+    <h2 class="titulo">Produção Agrícola</h2>
+    <div class="chart-container">
+        <canvas id="graficoProducao"></canvas>
+    </div>
 </section>
 
-<!-- GRÁFICO -->
 <section>
-<h2>📊 Impacto Ambiental</h2>
-<canvas id="grafico"></canvas>
+    <h2 class="titulo">Regiões Agrícolas do Paraná</h2>
+    <div class="mapa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Parana_Municip.svg" alt="Mapa do Paraná">
+    </div>
 </section>
 
-<!-- CERTIFICADO -->
-<canvas id="certificado" class="hidden"></canvas>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Agrinho Ultra Max</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-
-<!-- LOADING -->
-<div id="loading">
-<h1>🌱 AgroSustentável</h1>
-<p>Carregando experiência...</p>
-</div>
-
-<!-- HOME -->
-<section id="home">
-<h1>🌾 Bem-vindo ao Futuro do Campo</h1>
-
-<input id="nome" placeholder="Digite seu nome">
-
-<button onclick="start()">Entrar</button>
+<section id="curiosidades">
+    <h2 class="titulo">Curiosidades</h2>
+    <div class="curiosidade-box">
+        <p id="curiosidade">O Paraná é líder nacional na produção de carne de frango.</p>
+        <button id="btnCuriosidade">Nova Curiosidade</button>
+    </div>
 </section>
 
-<!-- QUIZ -->
-<section id="quiz" class="hidden">
-
-<div class="top">
-<h2 id="question"></h2>
-<div id="progress"></div>
-</div>
-
-<div id="answers"></div>
-
+<section id="videos">
+    <h2 class="titulo">Vídeos Sobre o Agronegócio</h2>
+    <div class="videos">
+        <iframe src="https://www.youtube.com/embed/EQ6oS7n6j5A" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/qoJ9sKx8YlY" allowfullscreen></iframe>
+    </div>
 </section>
 
-<!-- RESULT -->
-<section id="result" class="hidden"></section>
-
-<!-- RANKING -->
-<section id="ranking">
-<h2>🏆 Ranking</h2>
-<div id="list"></div>
-</section>
-
-<canvas id="cert" class="hidden"></canvas>
-
-<script src="script.js"></script>
-</body>
-</html>
-<section id="sobre">
-  <div class="container">
-    <h2>Sobre o Projeto</h2>
-    <p>
-      Na Fazenda Agro Sustentável, implementamos práticas de agricultura inteligente que reduziram:
-    </p>
-    <ul>
-      <li>💧 Consumo de água em 30% através de irrigação por gotejamento</li>
-      <li>🌱 Uso de defensivos químicos em 50% via controle biológico</li>
-      <li>🌍 Emissão de carbono em 20% com energia solar nas estufas</li>
-    </ul>
-    <p>
-      Trabalhamos com cooperativas locais e priorizamos produtos certificados e de alta qualidade.
-    </p>
-  </div>
-</section> 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<!-- no <head> -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<!-- no body, no final -->
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
-<div class="card" data-aos="fade-up">
-  <h3>Plantio Direto</h3>
-  <p>Reduz erosão e mantém o solo fértil.</p>
-</div>
-<div class="produto-card" data-aos="zoom-in">
-  <h3>Milho Orgânico</h3>
-  <p>Produzido com economia de água 💧 e sem agrotóxicos 🌱</p>
-  <p>Certificações: Orgânico, Fair Trade</p>
-  <button class="btn">Saiba mais</button>
-</div>
-<div class="stat-card">
-  <h3 class="contador" data-target="5000">0</h3>
-  <p>Hectares monitorados</p>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p>Projeto Educacional para o Concurso Agrinho 2026</p>
-    <p>Desenvolvido por Murilo Rodrigues</p>
-    <p>Email: contato@agrosustentavel.com | 📞 (45) 99851-4350</p>
-    <p>
-      <a href="#" target="_blank">Facebook</a> |
-      <a href="#" target="_blank">Instagram</a> |
-      <a href="#" target="_blank">LinkedIn</a>
-    </p>
-    <p>✅ LGPD | Certificações Sustentáveis</p>
-  </div>
+<footer>
+    <p>Projeto AGRINHO © 2026</p>
 </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
